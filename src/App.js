@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Row, Col, Steps, PageHeader, message} from 'antd'
-import './App.css'
+import './App.scss'
 import 'antd/dist/antd.css'
 import StepContent from './StepContent'
 import uuidv1 from 'uuid/v1'

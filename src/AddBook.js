@@ -80,6 +80,9 @@ class AddBookForm extends Component {
               <Input
                 prefix={<Icon type="form" style={{color: 'rgba(0,0,0,.25)'}} />}
                 type="number"
+                min="0"
+                max="10000"
+                step="1"
                 placeholder="Number of pages"
               />
             )}
