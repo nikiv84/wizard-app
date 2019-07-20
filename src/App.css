@@ -1,33 +1,127 @@
-.App {
+html,
+body {
+  overflow: auto;
+}
+
+body {
+  padding: 1rem;
+}
+
+#root {
+  height: 100%;
+}
+
+.app {
+  margin-top: 2rem;
+}
+
+.wizard-container {
+  margin-top: 2rem;
+}
+
+.app .ant-page-header {
+  padding: 0;
+}
+
+.steps-content {
+  margin: 2rem 0;
+  border: 1px dashed #e9e9e9;
+  border-radius: 6px;
+  background-color: #fafafa;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.steps-content .genre-btn {
+  margin: 1rem 0.5rem;
+  flex: 0 1 8rem;
+}
+
+.steps-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.steps-navigation .next-btn {
+  justify-self: flex-end;
+  margin-left: auto;
+}
+
+.steps-navigation .ant-btn {
+  min-width: 8rem;
+}
+
+.steps-navigation .ant-btn:last-of-type:not(:first-of-type) {
+  margin-left: 0.5rem;
+}
+
+.line-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.login-form.ant-form {
+  width: 500px;
+  margin: 2rem;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.steps-content form textarea.ant-input {
+  min-height: 100px;
+}
+
+.steps-content form .ant-form-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.steps-content .steps-content-header {
+  flex-basis: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.steps-content .steps-content-header .ant-page-header-heading-sub-title {
+  display: block;
+}
+
+.add-book-success-wrapper {
+  height: calc(100vh - 2rem);
+}
+
+.add-book-success-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.add-book-success-container .icon-success {
+  font-size: 12rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-book-success-container > * {
+  flex: 1 1 100%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-book-success-container button {
+  margin: 2rem 0;
+  flex: 0 0 8rem;
 }
