@@ -10,6 +10,7 @@ import Book from './models/Book'
 import {stepTypes, contentType} from './common/helpers'
 import cloneDeep from 'lodash/cloneDeep'
 import AddBookSuccess from './AddBookSuccess'
+import Logo from './Logo'
 
 const {GENRE, SUBGENRE, ADD_SUBGENRE, INFORMATION, ELLIPSIS} = stepTypes
 
@@ -272,6 +273,7 @@ class App extends Component {
       <div className="app">
         <Row>
           <Col span={16} offset={4}>
+            <Logo />
             <PageHeader title="Add book - New book" />
           </Col>
         </Row>
