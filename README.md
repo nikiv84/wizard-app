@@ -1,5 +1,5 @@
 # WizardApp
-![No more Tabs](/src/logo.svg)
+![No more Tabs](/src/assets/logo.svg)
 
 WizardApp is React app that will allow librarians to navigate through various steps in order to add a new book to the system.
 
