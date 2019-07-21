@@ -1,6 +1,6 @@
 import React from 'react'
 import {Button} from 'antd'
-import {stepTypes} from './common/helpers'
+import {stepTypes} from '../common/helpers'
 
 export default function Navigation({
   current,

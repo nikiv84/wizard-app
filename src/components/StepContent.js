@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Genres from './Genres'
 import AddSubgenre from './AddSubgenre'
 import AddBook from './AddBook'
-import {contentType} from './common/helpers'
+import {contentType} from '../common/helpers'
 
 class StepContent extends Component {
   getContent = currentStep => {

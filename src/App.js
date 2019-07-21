@@ -1,17 +1,20 @@
 import React, {Component} from 'react'
 import {Row, Col, Steps, PageHeader, message} from 'antd'
+
+import StepContent from './components/StepContent'
+import Navigation from './components/Navigation'
+import Book from './models/Book'
+import AddBookSuccess from './components/AddBookSuccess'
+import Logo from './components/Logo'
+
+import uuidv1 from 'uuid/v1'
+import {dataService} from './services/dataService'
+import cloneDeep from 'lodash/cloneDeep'
+
 import './App.scss'
 import 'antd/dist/antd.css'
-import StepContent from './StepContent'
-import uuidv1 from 'uuid/v1'
-import Navigation from './Navigation'
-import {dataService} from './services/dataService'
-import Book from './models/Book'
-import {stepTypes, contentType} from './common/helpers'
-import cloneDeep from 'lodash/cloneDeep'
-import AddBookSuccess from './AddBookSuccess'
-import Logo from './Logo'
 
+import {stepTypes, contentType} from './common/helpers'
 const {GENRE, SUBGENRE, ADD_SUBGENRE, INFORMATION, ELLIPSIS} = stepTypes
 
 class App extends Component {
