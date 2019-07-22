@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import {Form, Icon, Input, Checkbox} from 'antd'
 
 class AddSubgenreForm extends Component {
@@ -59,3 +60,8 @@ class AddSubgenreForm extends Component {
 const AddSubgenre = Form.create({name: 'add_subgenre'})(AddSubgenreForm)
 
 export default AddSubgenre
+
+AddSubgenre.propTypes = {
+  addSubgenre: PropTypes.func.isRequired,
+  addSubgenreSubmitForm: PropTypes.bool.isRequired,
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Icon, Button} from 'antd'
 
 const AddBookSuccess = ({restartWizard}) => {
@@ -17,3 +18,7 @@ const AddBookSuccess = ({restartWizard}) => {
 }
 
 export default AddBookSuccess
+
+AddBookSuccess.propTypes = {
+  restartWizard: PropTypes.func.isRequired,
+}

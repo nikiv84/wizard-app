@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import {Form, Icon, Input, PageHeader} from 'antd'
 import TextArea from 'antd/lib/input/TextArea'
 
@@ -123,3 +124,8 @@ class AddBookForm extends Component {
 const AddBook = Form.create({name: 'add_book'})(AddBookForm)
 
 export default AddBook
+
+AddBook.propTypes = {
+  addBook: PropTypes.func.isRequired,
+  addBookSubmitForm: PropTypes.bool.isRequired,
+}

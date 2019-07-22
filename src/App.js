@@ -18,12 +18,6 @@ import {stepTypes, contentType} from './common/helpers'
 const {GENRE, SUBGENRE, ADD_SUBGENRE, INFORMATION, ELLIPSIS} = stepTypes
 
 class App extends Component {
-  disableNexButton = {
-    isNextDisabled: true,
-  }
-  enableNextButton = {
-    isNextDisabled: false,
-  }
   initialSteps = [
     {
       title: GENRE,
@@ -96,19 +90,19 @@ class App extends Component {
 
   checkStepAndNextButtonState = () => {
     const {selectedGenre, selectedSubgenre} = this.state
-    let isNextDisabled = {}
+    let isNextDisabled = false
     if (this.checkCurrentStep(GENRE)) {
       if (!selectedGenre) {
-        isNextDisabled = {...this.disableNexButton}
+        isNextDisabled = true
       } else {
-        isNextDisabled = {...this.enableNextButton}
+        isNextDisabled = false
       }
     }
     if (this.checkCurrentStep(SUBGENRE)) {
       if (!selectedSubgenre) {
-        isNextDisabled = {...this.disableNexButton}
+        isNextDisabled = true
       } else {
-        isNextDisabled = {...this.enableNextButton}
+        isNextDisabled = false
       }
     }
     return isNextDisabled

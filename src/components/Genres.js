@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import {Button} from 'antd'
 import {contentType} from '../common/helpers'
 
@@ -39,4 +40,11 @@ export default class Genres extends Component {
       </div>
     )
   }
+}
+
+Genres.propTypes = {
+  content: PropTypes.object.isRequired,
+  selectedGenre: PropTypes.string,
+  selectedSubgenre: PropTypes.string,
+  onButtonClick: PropTypes.func.isRequired,
 }

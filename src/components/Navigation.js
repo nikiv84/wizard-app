@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Button} from 'antd'
 import {stepTypes} from '../common/helpers'
 
@@ -18,6 +19,7 @@ export default function Navigation({
     }
     goToNextStep()
   }
+
   return (
     <div className="steps-navigation">
       {current > 0 && (
@@ -37,4 +39,14 @@ export default function Navigation({
       )}
     </div>
   )
+}
+
+Navigation.propTypes = {
+  current: PropTypes.number.isRequired,
+  steps: PropTypes.array.isRequired,
+  isNextDisabled: PropTypes.bool.isRequired,
+  goToNextStep: PropTypes.func.isRequired,
+  goToPrevStep: PropTypes.func.isRequired,
+  triggerAddSubgenreSubmitForm: PropTypes.func.isRequired,
+  checkCurrentStep: PropTypes.func.isRequired,
 }
